@@ -50,5 +50,3 @@ jobs:
           body: The deployment to production was successful.
           to: recipient@example.com
           from: dhw972300@gmail.com
-
-
