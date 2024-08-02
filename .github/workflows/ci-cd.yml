@@ -19,7 +19,7 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v1
         with:
-          username: ${{ secrets.hw972300@gmail.com }}
+          username: ${{ secrets.dhw972300@gmail.com }}
           password: ${{ secrets.Hung4864 }}
 
       - name: Build and push Docker image
@@ -27,16 +27,16 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.hw972300@gmail.com }}/my-devops:latest
+          tags: ${{ secrets.dhw972300@gmail.com }}/my-devops:latest
 
       - name: Deploy to Server
         uses: appleboy/ssh-action@v0.1.6
         with:
           host: your-server
-          username: hw972300@gmail.com
+          username: dhw972300@gmail.com
           key: ${{ secrets.DOCKER_DOANHUNG9723 }}
           script: |
-            docker pull ${{ secrets.hw972300@gmail.com }}/my-devops:latest
+            docker pull ${{ secrets.dhw972300@gmail.com }}/my-devops:latest
             docker-compose up -d
 
       - name: Send email notification
@@ -44,7 +44,7 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 587
-          username: ${{ secrets.hw972300@gmail.com }}
+          username: ${{ secrets.dhw972300@gmail.com }}
           password: ${{ secrets.Hung4864 }}
           subject: Deployment Notification
           body: The deployment to production was successful.
